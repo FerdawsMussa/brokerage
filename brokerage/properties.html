@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | Hirmata Mentina Kebele</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Hirmata Mentina Kebele</h1>
+                <p>Web-Based Brokerage System</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html" class="active">Properties</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="property-search">
+            <div class="container">
+                <h2>Find Properties</h2>
+                <form id="searchForm">
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <label for="propertyType">Property Type</label>
+                            <select id="propertyType" name="propertyType">
+                                <option value="">All Types</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="land">Land</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="transactionType">Transaction Type</label>
+                            <select id="transactionType" name="transactionType">
+                                <option value="">All Transactions</option>
+                                <option value="sale">For Sale</option>
+                                <option value="rent">For Rent</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="priceRange">Price Range</label>
+                            <select id="priceRange" name="priceRange">
+                                <option value="">Any Price</option>
+                                <option value="0-500000">Under 500,000 ETB</option>
+                                <option value="500000-1000000">500,000 - 1,000,000 ETB</option>
+                                <option value="1000000-2000000">1,000,000 - 2,000,000 ETB</option>
+                                <option value="2000000-5000000">2,000,000 - 5,000,000 ETB</option>
+                                <option value="5000000-">Over 5,000,000 ETB</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="Enter location">
+                        </div>
+                        
+                        <button type="submit" class="btn">Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="property-list">
+            <div class="container">
+                <div class="property-grid" id="propertyGrid">
+                    <!-- Properties will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hirmata Mentina Kebele Brokerage System. All rights reserved.</p>
+            <p>Developed by Jimma University Institute of Technology</p>
+        </div>
+    </footer>
+
+    <script src="properties.js"></script>
+</body>
+</html>
